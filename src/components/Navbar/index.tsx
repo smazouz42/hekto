@@ -1,43 +1,30 @@
-import { FiShoppingCart } from "react-icons/fi";
-import { CiHeart } from "react-icons/ci";
-import { AiOutlineUser } from "react-icons/ai";
-import { MdOutlineMail } from "react-icons/md";
-import { PiPhoneCallLight } from "react-icons/pi";
+import { CiSearch } from "react-icons/ci";
 
-
-
-
-
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <div className="bg-purple-700 w-full">
-      <div className="flex container mx-auto justify-between py-2 text-sm font-medium">
-        <div className="flex gap-4">
-          <span className="flex gap-1 items-center">
-            <MdOutlineMail size={13} color="white" />
-            <p className="text-white">S4idmazouz@gmail.com</p>
-          </span>
-          <span className="flex gap-1 items-center">
-            <PiPhoneCallLight size={13} color="white" />
-            <p className="text-white">(+212) 674402833</p>
-          </span>
-        </div>
-        <div className="flex gap-4 items-center">
-          <span className="flex gap-1 items-center">
-            <p className="text-white">Login</p>
-            <AiOutlineUser size={13} color="white" />
-          </span>
-          <span className="flex gap-1 items-center">
-            <p className="text-white">Wisthlist</p>
-            <CiHeart size={13} color="white" />
-          </span>
-          <p className="text-white">
-            <FiShoppingCart size={15} color="white" />
-          </p>
+    <div className="container mx-auto flex justify-between w-full  py-3">
+
+      <div className="flex gap-24 items-center">
+        <h1 className="text-black text-2xl">Hekto</h1>
+        <div className="flex gap-8 text-sm items-center">
+          <a href="/" className="text-black hover:text-pink-600">Home</a>
+          <a href="/pages" className="text-black hover:text-pink-600">Pages</a>
+          <a href="/products" className="text-black hover:text-pink-600">Products</a>
+          <a href="/blog" className="text-black hover:text-pink-600">Blog</a>
+          <a href="/shop" className="text-black hover:text-pink-600">Shop</a>
+          <a href="/contact" className="text-black hover:text-pink-600">Contact</a>
         </div>
       </div>
+
+      <div className="flex">
+        <input type="search" className="w-[266px] h-[40px] px-2 py-1 border focus:outline-none hover:outline-none " />
+        <span className="flex justify-center items-center w-[41px] h-[40px] bg-pink-600">
+          <CiSearch size={25} color="white" />
+        </span>
+      </div>
+
     </div>
-  );
+  )
 }
 
-export { NavBar }
+export { Navbar }
